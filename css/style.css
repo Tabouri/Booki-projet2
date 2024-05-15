@@ -11,8 +11,6 @@
 /*******Mon travail*******/
 
 .logo img {
-  position: absolute;
-  left: 60px;
   height: 30px;
   width: 70px;
 }
@@ -115,26 +113,28 @@ h2 {
   justify-content: space-between;
   gap: 25px;
   padding-top: 20px;
-  padding-right: 6px;
+  /* padding-right: 6px;*/
 }
 .card1 {
   border: 1px solid transparent;
   display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 20px;
   padding: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 35%;
-
-  margin-right: -12px;
+  /*padding-left: 5px;
+  padding-right: 5px;*/
+  line-height: 65%;
+  width: 28%;
+  /* margin-right: -12px;*/
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .img_heberg {
   height: 120px;
-  width: 220px;
+  width: 100%;
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
+  object-fit: cover;
 }
 .menu_etoile {
   padding-left: 10px;
@@ -202,12 +202,12 @@ i {
   gap: 15px;
   padding-left: 15px;
   display: flex;
-  flex-wrap: wrap;
+
   padding-bottom: 50px;
 }
 .img_act {
-  height: 350px;
-  width: 270px;
+  height: 330px;
+  width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -217,7 +217,7 @@ i {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   font-size: 13px;
 
-  width: 270px;
+  width: 23%;
 }
 .titre_act {
   padding-left: 15px;
@@ -298,13 +298,12 @@ footer {
 .foot {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  position: relative;
-  left: -115px;
-  top: -20px;
+  justify-content: space-between;
+
   font-size: 15px;
-  padding: 20px;
+  padding: 5px 250px 5px 30px;
 }
+
 .apropos {
   display: flex;
   flex-direction: column;
@@ -313,45 +312,45 @@ footer {
 
 /****** Media queries ***********/
 /*1440******/
-@media (max-with: 1440px) {
-}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .hebergements-and-populaires {
     flex-direction: column;
-  }
-  .hotel_marseille {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 25px;
-    padding-top: 20px;
-    padding-right: 6px;
   }
 
   .hebergements {
     width: 100%;
   }
 
+  .hotel_marseille {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+    padding-top: 20px;
+    /* padding-right: 6px;*/
+  }
   .card1 {
     border: 1px solid transparent;
     display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 20px;
     padding: 4px;
-    padding-left: 5px;
-    padding-right: 5px;
-    line-height: 35%;
-
-    margin-right: -12px;
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+    line-height: 65%;
+    width: 28%;
+    /* margin-right: -12px;*/
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
-
   .img_heberg {
     height: 120px;
-    width: 240px;
+    width: 100%;
     border-top-right-radius: 18px;
     border-top-left-radius: 18px;
+    object-fit: cover;
   }
   .populaires {
     width: 100%;
@@ -381,16 +380,40 @@ footer {
   .activite {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 15px;
+    padding-left: 15px;
+    display: flex;
+
+    padding-bottom: 50px;
   }
   .img_act {
-    height: 200px;
-    width: 180px;
+    height: 240px;
+    width: 100%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
   .card2 {
-    width: 180px;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    font-size: 13px;
+
+    width: 23%;
+  }
+  footer {
+    background-color: var(--main-bg-color);
+    padding-bottom: 20px;
+    width: 98%;
+    height: 150px;
+    position: relative;
+  }
+  .foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 15px;
+    padding: 5px 50px 5px 30px;
   }
 }
 
@@ -404,12 +427,12 @@ footer {
   .logo img {
     position: relative;
     top: 5px;
-    left: 220px;
+    left: 170px;
   }
   .menu {
     position: relative;
     top: 20px;
-    left: -50px;
+    left: -100px;
     display: flex;
     gap: 70px;
   }
@@ -430,7 +453,7 @@ footer {
   .i_text_i,
   form,
   .filtre {
-    padding-left: 60px;
+    padding-left: 40px;
   }
   .filtre {
     display: flex;
@@ -441,7 +464,7 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
   .liste_filtre {
-    padding-left: 10px;
+    padding-left: 2px;
   }
   .li_filtre {
     padding-left: 15px;
@@ -451,24 +474,26 @@ footer {
   .hebergements-and-populaires {
     display: flex;
     flex-direction: column-reverse;
-    padding-left: 60px;
+    padding-left: 30px;
   }
   .populaires {
     width: 100%;
     margin-bottom: 15px;
   }
   .hebergements {
-    width: 525px;
+    width: 100%;
     background-color: white;
   }
+
   .card1 {
     width: 100%;
   }
   .img_heberg {
-    width: 460px;
+    width: 100%;
   }
   .hebergements-and-populaires .hebergements {
     background-color: white;
+    padding-left: 5px;
   }
   .activite {
     display: flex;
@@ -476,13 +501,13 @@ footer {
   }
   .activ_marseille,
   .activite {
-    padding-left: 90px;
+    padding-left: 30px;
   }
   .card2 {
-    width: 420px;
+    width: 100%;
   }
   .img_act {
-    width: 420px;
+    width: 100%;
   }
   .foot {
     display: flex;
@@ -493,8 +518,17 @@ footer {
     width: 100%;
     height: 500px;
   }
+
+  .foot {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 15px;
+    padding: 5px 30px 5px 100px;
+  }
   form {
     display: grid;
     grid-template-columns: 0fr 0fr 0fr;
+    padding-left: 30px;
   }
 }
