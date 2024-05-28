@@ -20,17 +20,18 @@
   justify-content: space-between;
   margin: 15px 5px;
 }
-
+.search {
+  display: none;
+}
 .menu li {
   /**si non liste style : none après display : inline block**/
   display: inline;
-  padding-left: 35px;
+  padding: 35px 30px;
   color: black;
 }
 .menu li:hover {
   border-top: solid 3px #0065fc;
-  padding: 35px 40px;
-  transition: 0.6s;
+
   color: #0065fc;
 }
 /****essay
@@ -424,26 +425,60 @@ footer {
     display: flex;
     justify-content: center;
     margin: -3px -30px;
-    width: 800px;
+    width: 850px;
+  }
+  * {
+    font-size: 30px;
+  }
+  .main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .logo img {
+    height: 50px;
+    width: 100px;
+    margin-top: 30px;
   }
   .head {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 102%;
   }
-
+  .recherche {
+    display: none;
+  }
+  .search {
+    display: flex;
+    border-radius: 13px;
+    padding: 18px;
+    background-color: #0065fc;
+    border: transparent;
+    width: 88px;
+  }
+  .search i {
+    color: white;
+    padding: 10px;
+  }
   .menu {
     display: flex;
-    gap: -24px;
+
     text-align: center;
+    border-bottom: rgb(225, 228, 225) 3px solid;
+    margin-left: -13px;
   }
+
   .menu li {
     padding: 30px;
+
     width: 100%;
+    font-size: 28px;
   }
   .menu li:hover {
     border-top: none;
-    padding: 30px;
+
     border-bottom: #0065fc 3px solid;
     width: 100%;
   }
@@ -453,6 +488,33 @@ footer {
   form,
   .filtre {
     padding-left: 40px;
+    margin-left: 20px;
+  }
+  .liste_filtre {
+    padding: 0 100px;
+    margin-left: 25px;
+  }
+  .li_filtre {
+    border-radius: 40px;
+    padding: 20px;
+  }
+  .filtre_h1 {
+    font-size: 36px;
+  }
+  .p_head {
+    font-size: 25px;
+  }
+  .li_filtre {
+    font-size: 25px;
+  }
+  .text_i {
+    font-size: 25px;
+  }
+  .i .fa-info {
+    font-size: 20px;
+  }
+  .i {
+    padding: 7px 11px;
   }
   .filtre {
     display: flex;
@@ -476,23 +538,50 @@ footer {
     padding-left: 30px;
   }
   .populaires {
-    width: 100%;
+    width: 105%;
     margin-bottom: 15px;
+    margin-left: -18px;
   }
   .hebergements {
     width: 100%;
     background-color: white;
   }
+  .section-title {
+    padding-left: 30px;
+  }
 
   .card1 {
     width: 100%;
+    margin-left: 25px;
   }
   .img_heberg {
     width: 100%;
+    object-fit: cover;
+    height: 243px;
+  }
+  .hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 0;
+    padding: 30px;
+    box-sizing: border-box;
   }
   .hebergements-and-populaires .hebergements {
     background-color: white;
     padding-left: 5px;
+    margin-left: 10px;
+  }
+  .populaires-cards img {
+    height: 280px;
+  }
+  .card {
+    height: 280px;
+    margin-left: 23px;
+  }
+  .hh3 {
+    margin-left: 30px;
+  }
+  .section-title {
+    font-size: 35px;
   }
   .activite {
     display: flex;
@@ -501,12 +590,19 @@ footer {
   .activ_marseille,
   .activite {
     padding-left: 30px;
+    margin-left: 25px;
+  }
+  .activ_marseille {
+    font-size: 35px;
+    margin-left: 60px;
   }
   .card2 {
-    width: 100%;
+    width: 90%;
+    margin-left: 30px;
   }
   .img_act {
     width: 100%;
+    object-fit: cover;
   }
   .foot {
     display: flex;
@@ -514,10 +610,9 @@ footer {
     padding-left: 210px;
   }
   footer {
-    width: 820px;
-    height: 500px;
-
-    margin-left: -10%;
+    width: 860px;
+    height: 750px;
+    margin-left: 13px;
   }
 
   .foot {
@@ -531,6 +626,13 @@ footer {
     display: grid;
     grid-template-columns: 0fr 0fr 0fr;
     padding-left: 45px;
+    height: 85px;
+  }
+  .logo_map {
+    width: 52px;
+  }
+  .logo_map .fa-map-marker-alt {
+    padding: 10px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -552,11 +654,15 @@ footer {
     /* margin-right: -12px; */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
+  .img_heberg {
+    object-fit: cover;
+  }
   .foot {
     padding-left: 100px;
   }
   .img_act {
     height: 200px;
+    object-fit: cover;
   }
   .li_filtre {
     padding: 2px;
