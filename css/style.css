@@ -637,10 +637,10 @@ footer {
 }
 @media screen and (max-width: 320px) {
   .card {
-    width: 570px;
+    width: 760px;
   }
   .populaires {
-    width: 640px;
+    width: 860px;
   }
   .card1 {
     border: 1px solid transparent;
@@ -657,19 +657,23 @@ footer {
   .img_heberg {
     object-fit: cover;
   }
+  .card2 {
+    width: 740px;
+    height: 500px;
+  }
+
   .foot {
     padding-left: 100px;
   }
   .img_act {
-    height: 200px;
+    height: 400px;
     object-fit: cover;
   }
   .li_filtre {
     padding: 2px;
   }
   footer {
-    width: 820px;
-    height: 500px;
-    margin-left: -10%;
+    width: 858px;
+    height: 800px;
   }
 }
